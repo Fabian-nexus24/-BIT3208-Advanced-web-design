@@ -1,0 +1,6 @@
+# Deny script execution in uploads (Apache / XAMPP)
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8|phps|cgi|pl|exe)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes
