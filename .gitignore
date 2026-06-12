@@ -1,0 +1,19 @@
+# Uploads (keep directory, ignore user files)
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
+!uploads/profiles/
+uploads/profiles/*
+!uploads/profiles/.gitkeep
+!uploads/products/
+uploads/products/*
+!uploads/products/.gitkeep
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local environment (never commit secrets)
+config/env.local.php
