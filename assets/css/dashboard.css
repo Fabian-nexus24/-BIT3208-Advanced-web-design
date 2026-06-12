@@ -1,0 +1,121 @@
+/* Phase 5 — Dashboard polish */
+
+.dashboard-body {
+    background: var(--fc-surface, #f4f7f4);
+    font-family: var(--fc-font, system-ui, sans-serif);
+}
+
+.dashboard-layout {
+    min-height: 100vh;
+}
+
+.dashboard-sidebar {
+    width: 268px;
+    min-height: 100vh;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #1b5e20 0%, #0d3d0d 100%) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-sidebar .nav-link {
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 0.65rem 1rem !important;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-sidebar .nav-link.active {
+    background: linear-gradient(90deg, var(--fc-green), #43a047) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-main {
+    min-width: 0;
+    flex: 1;
+}
+
+.dashboard-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff !important;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-content {
+    padding: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .dashboard-content { padding: 1.75rem; }
+}
+
+.stat-card {
+    border-radius: var(--fc-radius, 14px) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--fc-shadow-hover, 0 12px 28px rgba(0,0,0,0.1)) !important;
+}
+
+.stat-card .stat-icon {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.stat-card h3 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.dashboard-welcome {
+    background: linear-gradient(135deg, #e8f5e9, #fff);
+    border-radius: var(--fc-radius, 14px);
+    border: 1px solid rgba(46, 125, 50, 0.12);
+}
+
+.quick-action-card {
+    border-radius: var(--fc-radius, 14px);
+    transition: box-shadow 0.2s ease;
+}
+
+.quick-action-card:hover {
+    box-shadow: var(--fc-shadow-hover);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--fc-green);
+    box-shadow: var(--fc-shadow);
+}
+
+.dashboard-mobile-bar {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .dashboard-sidebar-desktop {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .dashboard-offcanvas-toggle {
+        display: none !important;
+    }
+}

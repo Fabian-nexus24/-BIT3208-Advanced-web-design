@@ -1,0 +1,45 @@
+/* Phase 5 — Marketplace page specifics (extends theme.css) */
+
+.inquiry-card {
+    border-radius: var(--fc-radius);
+    border-left: 4px solid var(--fc-green);
+    transition: box-shadow var(--fc-transition);
+}
+
+.inquiry-card:hover {
+    box-shadow: var(--fc-shadow);
+}
+
+.inquiry-card-new {
+    border-left-color: var(--fc-orange);
+    background: linear-gradient(90deg, var(--fc-cream) 0%, #ffffff 15%);
+}
+
+.inquiry-message-input {
+    resize: vertical;
+    min-height: 140px;
+    border-radius: 10px;
+}
+
+.inquiry-message-body {
+    line-height: 1.65;
+    color: #37474f;
+}
+
+.inquiry-product-summary {
+    border-radius: var(--fc-radius);
+    overflow: hidden;
+    box-shadow: var(--fc-shadow);
+}
+
+.farmer-product-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.products-page-header {
+    background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%);
+    border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+}

@@ -1,0 +1,326 @@
+/* FarmConnect Kenya — Phase 5 design system */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --fc-green-dark: #1b5e20;
+    --fc-green: #2e7d32;
+    --fc-green-light: #66bb6a;
+    --fc-orange: #ef6c00;
+    --fc-orange-light: #ff9800;
+    --fc-cream: #fff8e1;
+    --fc-surface: #f8faf8;
+    --fc-text: #1a2e1a;
+    --fc-muted: #5f6f5f;
+    --fc-radius: 14px;
+    --fc-radius-lg: 20px;
+    --fc-shadow: 0 4px 20px rgba(27, 94, 32, 0.08);
+    --fc-shadow-hover: 0 16px 40px rgba(27, 94, 32, 0.14);
+    --fc-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --fc-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--fc-font);
+    color: var(--fc-text);
+    background-color: var(--fc-surface);
+    -webkit-font-smoothing: antialiased;
+}
+
+.brand-text { font-size: 1.15rem; letter-spacing: -0.02em; }
+.brand-accent { color: var(--fc-orange-light); }
+.brand-logo { transition: transform var(--fc-transition); }
+a:hover .brand-logo { transform: scale(1.05); }
+
+/* Buttons */
+.btn-marketplace {
+    background: linear-gradient(135deg, var(--fc-orange) 0%, var(--fc-orange-light) 100%);
+    border: none;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.55rem 1.25rem;
+    transition: transform var(--fc-transition), box-shadow var(--fc-transition);
+    box-shadow: 0 4px 14px rgba(239, 108, 0, 0.35);
+}
+
+.btn-marketplace:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(239, 108, 0, 0.45);
+    color: #fff !important;
+}
+
+.btn-fc-green {
+    background: linear-gradient(135deg, var(--fc-green-dark), var(--fc-green));
+    color: #fff !important;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    transition: var(--fc-transition);
+}
+
+.btn-fc-green:hover {
+    transform: translateY(-2px);
+    color: #fff !important;
+    box-shadow: var(--fc-shadow-hover);
+}
+
+.btn-hero-outline {
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: var(--fc-transition);
+}
+
+.btn-hero-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar-market {
+    background: linear-gradient(90deg, var(--fc-green-dark) 0%, var(--fc-green) 55%, #388e3c 100%) !important;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+}
+
+.navbar-market .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 8px;
+    transition: background var(--fc-transition);
+}
+
+.navbar-market .nav-link:hover,
+.navbar-market .nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hero */
+.hero-marketplace {
+    background: linear-gradient(135deg, var(--fc-green-dark) 0%, var(--fc-green) 45%, var(--fc-orange) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-marketplace::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+    top: -120px;
+    right: -80px;
+    pointer-events: none;
+}
+
+.hero-marketplace .container { position: relative; z-index: 1; }
+
+.hero-stats-bar {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border-radius: var(--fc-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+.section-title-market {
+    font-weight: 800;
+    color: var(--fc-green-dark);
+    letter-spacing: -0.03em;
+}
+
+.section-subtitle {
+    color: var(--fc-muted);
+    max-width: 560px;
+}
+
+.feature-card {
+    border-radius: var(--fc-radius);
+    border: none;
+    transition: transform var(--fc-transition), box-shadow var(--fc-transition);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--fc-shadow-hover);
+}
+
+.feature-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.category-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 1rem;
+    border-radius: var(--fc-radius);
+    background: #fff;
+    border: 1px solid rgba(46, 125, 50, 0.12);
+    text-decoration: none;
+    color: var(--fc-text);
+    transition: var(--fc-transition);
+    box-shadow: var(--fc-shadow);
+}
+
+.category-pill:hover {
+    transform: translateY(-4px);
+    border-color: var(--fc-green);
+    color: var(--fc-green-dark);
+    box-shadow: var(--fc-shadow-hover);
+}
+
+.category-pill i {
+    font-size: 1.75rem;
+    color: var(--fc-green);
+    margin-bottom: 0.5rem;
+}
+
+/* Product cards */
+.product-card {
+    border-radius: var(--fc-radius) !important;
+    overflow: hidden;
+    transition: transform var(--fc-transition), box-shadow var(--fc-transition);
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--fc-shadow-hover) !important;
+}
+
+.product-card-img-wrap {
+    display: block;
+    overflow: hidden;
+    background: linear-gradient(180deg, #e8f5e9, #f1f8e9);
+    aspect-ratio: 4 / 3;
+    position: relative;
+}
+
+.product-card-badge-float {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+}
+
+.product-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-img {
+    transform: scale(1.06);
+}
+
+.product-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--fc-green-dark);
+}
+
+.product-card .btn-outline-success {
+    border-width: 2px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: var(--fc-transition);
+}
+
+.product-card .btn-outline-success:hover {
+    transform: translateY(-1px);
+}
+
+/* Empty state */
+.empty-state-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8f5e9, #fff8e1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--fc-green);
+}
+
+.empty-state-message { max-width: 400px; }
+
+/* Footer */
+.site-footer {
+    background: linear-gradient(180deg, #1a3d1a 0%, #0d260d 100%);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color var(--fc-transition);
+}
+
+.site-footer a:hover { color: var(--fc-orange-light); }
+
+/* Alerts */
+.alert {
+    border-radius: var(--fc-radius);
+    border: none;
+    box-shadow: var(--fc-shadow);
+}
+
+.alert-success { background: #e8f5e9; color: #1b5e20; }
+.alert-danger { background: #ffebee; color: #b71c1c; }
+.alert-warning { background: #fff8e1; color: #e65100; }
+.alert-info { background: #e3f2fd; color: #0d47a1; }
+
+/* Auth cards */
+.card-auth,
+.auth-card {
+    border-radius: var(--fc-radius-lg);
+    box-shadow: var(--fc-shadow-hover);
+}
+
+/* Utilities */
+.animate-fade-in {
+    animation: fcFadeIn 0.5s ease forwards;
+}
+
+@keyframes fcFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.featured-strip {
+    background: linear-gradient(180deg, var(--fc-cream) 0%, #fff 100%);
+}
+
+.marketplace-filters {
+    background: #fff;
+    border-radius: var(--fc-radius);
+    box-shadow: var(--fc-shadow);
+    border: 1px solid rgba(46, 125, 50, 0.08);
+}
+
+.product-detail-img {
+    border-radius: var(--fc-radius-lg);
+    box-shadow: var(--fc-shadow);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

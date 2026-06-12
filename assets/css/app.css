@@ -1,0 +1,5 @@
+/* FarmConnect — app overrides (theme.css holds design system) */
+
+.card-auth {
+    max-width: 480px;
+}
